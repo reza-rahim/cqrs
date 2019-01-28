@@ -1,7 +1,5 @@
 # cqrs
 
-
-
 docker run -d -p 6379:6379 --name redismod redislabs/redismod
 
 npm -y install 
@@ -14,7 +12,7 @@ sh cqrs/reset.sh
 
 # Can be run on different terminal
 
-# Start the node apps
+#### Start the node apps
 
 node  start 
 
