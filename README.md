@@ -12,7 +12,7 @@ node seed/product.js
 # Can be run on different terminal
 
 # Start the node apps
-## For credit card use 4242424242424242
+#### For credit card use 4242424242424242
 node  start 
 
 node cqrs/1-OrderCreateCommandHandler.js
