@@ -10,9 +10,9 @@ node seed/product.js
 # reset the Redis 
 sh cqrs/reset.sh 
 
-# Can be run on different terminal
+# Start the node apps
 
-#### Start the node apps
+#### Can be run on different terminal
 
 node  start 
 
