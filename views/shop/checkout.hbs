@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 main">
+        <h1>Checkout</h1>
+        <h4>Your Total: ${{total}}</h4>
+        <div id="charge-error" class="alert alert-danger {{#if noError}}invisible{{/if}}">
+            {{errMsg}}
+        </div>
+        <form action="/checkout" method="post" id="checkout-form">
+            <div class="checkout">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="checkout">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+            </div>
+            <div class="checkout">
+                <label for="card-number">Credit Card Number</label>
+                <input type="text" class="form-control" id="card-number" name="cardNumber" required>
+            </div>
+            <div class="row checkout">
+                <div class="col-md-6">
+                    <label for="card-expiry-month">Expiration Month</label>
+                    <input type="text" class="form-control" id="card-expiry-month" name="cardExpiryMonth" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="card-expiry-year">Expiration Year</label>
+                    <input type="text" class="form-control" id="card-expiry-year" name="cardExpiryYear" required>
+                </div>
+            </div>
+            <div class="checkout">
+                <label for="card-cvc">CVC</label>
+                <input type="text" class="form-control" id="card-cvc" required>
+            </div>
+            <button class="btn btn-raised btn-success main" type="submit">Buy</button>
+        </form>
+    </div>
+</div>
+

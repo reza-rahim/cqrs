@@ -1,0 +1,6 @@
+cat > /tmp/create_db.json << EOL
+{
+  "name": "demo",
+  "memory_size": 107374182
+}
+EOL
