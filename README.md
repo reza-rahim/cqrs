@@ -31,4 +31,4 @@ http://localhost:3000/
 
 #### For credit card use 4242424242424242
 
-![alt text](images/screenhsot.png)
+![alt text](images/sreenshot.png)
