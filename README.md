@@ -12,7 +12,7 @@ node seed/product.js
 # Can be run on different terminal
 
 # Start the node apps
-#### For credit card use 4242424242424242
+
 node  start 
 
 node cqrs/1-OrderCreateCommandHandler.js
@@ -25,6 +25,8 @@ node cqrs/4-OrderPaymentEventHandler.js
 
 # access the UI
 http://localhost:3000/
+
+#### For credit card use 4242424242424242
 
 # reset the Redis 
 sh cqrs/reset.sh 
