@@ -9,6 +9,9 @@ npm -y install
 # load the database with product info
 node seed/product.js 
 
+# reset the Redis 
+sh cqrs/reset.sh 
+
 # Can be run on different terminal
 
 # Start the node apps
@@ -28,5 +31,4 @@ http://localhost:3000/
 
 #### For credit card use 4242424242424242
 
-# reset the Redis 
-sh cqrs/reset.sh 
+
