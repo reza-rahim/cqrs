@@ -1,8 +1,10 @@
 # cqrs
 
 
+
 docker run -d -p 6379:6379 --name redismod redislabs/redismod
 
+npm -y install 
 
 node seed/product.js 
 
