@@ -22,9 +22,9 @@ async function add_to_Aggregator(redisClient, streamPayload){
    console.log("....... Adding  StreamOrderAggregate: " + JSON.stringify(aggregatePayload))
 
    try{
-       var rtn1 =  await redisClient.send_commandAsync('XADD',['StreamOrderAggregate', "*", 
-                                                               'orderAggregate', 
-                                                               JSON.stringify(aggregatePayload) ])
+       var rtn1 =  await redisClient.xaddAsync('StreamOrderAggregate', "*", 
+                                               'orderAggregate', 
+                                                JSON.stringify(aggregatePayload) )
    }
    catch(error) {
         console.error(error);

@@ -20,9 +20,7 @@ async function add_to_aggregator(redisClient, key, streamPayload){
    console.log("....... Adding to StreamOrderAggregate: " + JSON.stringify(aggregatePayload))
 
    try{
-       var rtn1 =  await redisClient.send_commandAsync('XADD',['StreamOrderAggregate', 
-                                                               "*", 'orderAggregate', 
-                                                               JSON.stringify(aggregatePayload) ])      
+       var rtn1 =  await redisClient.xaddAsync('StreamOrderAggregate', "*", 'orderAggregate', JSON.stringify(aggregatePayload) )      
    }
    catch(error) {
         console.error(error);
@@ -48,8 +46,9 @@ async function add_to_payment(redisClient, key, streamPayload){
 
    console.log("....... Adding  StreamCreatePayment: " + JSON.stringify(paymentPayload))
    try{
-       var rtn1 =  await redisClient.send_commandAsync('XADD',['StreamCreatePayment', key, 
-                                                               'paymentPayload', JSON.stringify(paymentPayload) ])
+
+       var rtn1 =  await redisClient.xaddAsync('StreamCreatePayment', key, 
+                                               'paymentPayload', JSON.stringify(paymentPayload) ) 
    }
    catch(error) {
        console.error(error);

@@ -69,8 +69,8 @@ async function main(){
                */
               
               try {
-              let rtn =  await redisClient.send_commandAsync('XADD',['StreamOrderPayment', key, 
-                                                             'paymentPayload', JSON.stringify(paymentPayload) ])
+              let rtn =  await redisClient.xaddAsync('StreamOrderPayment', key, 
+                                                     'paymentPayload', JSON.stringify(paymentPayload) )
               }
                   catch(error) {
                      console.error(error);
