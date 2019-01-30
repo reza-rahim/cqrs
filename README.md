@@ -1,7 +1,5 @@
 # cqrs
 
-
-
 docker run -d -p 6379:6379 --name redismod redislabs/redismod
 
 npm -y install 
@@ -9,9 +7,12 @@ npm -y install
 # load the database with product info
 node seed/product.js 
 
-# Can be run on different terminal
+# reset the Redis 
+sh cqrs/reset.sh 
 
 # Start the node apps
+
+#### Can be run on different terminal
 
 node  start 
 
@@ -28,5 +29,4 @@ http://localhost:3000/
 
 #### For credit card use 4242424242424242
 
-# reset the Redis 
-sh cqrs/reset.sh 
+![alt text](images/sreenshot.png)
