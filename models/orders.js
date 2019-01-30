@@ -13,12 +13,17 @@ async function getOrders(user) {
   var rtn =  await redisClient.send_commandAsync('FT.SEARCH',['order_view','@user:'+escape(user), 
                                                               'SORTBY', 'timeStamp', 'DESC'])
   
-  console.log(rtn)
+  //console.log(rtn)
 
   for(i = 2; i<= rtn.length; i=i+2){
       console.log("models/orders.js - getOrders()")
-      console.log(rtn[i][5])
-      orderView.push(JSON.parse(rtn[i][5]))
+      
+      for( j = 0; j < 6 ; j++ ){
+         if( rtn[i][j] == 'data'){
+            //console.log(rtn[i][j+1])
+            orderView.push(JSON.parse(rtn[i][j+1]))
+         }
+      }
   }
 
 
