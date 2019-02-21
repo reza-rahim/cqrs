@@ -14,7 +14,7 @@ sh cqrs/reset.sh
 
 #### Can be run on different terminal
 
-node  start 
+npm  start 
 
 node cqrs/1-OrderCreateCommandHandler.js
 
