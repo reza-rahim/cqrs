@@ -24,6 +24,11 @@ node cqrs/3-PaymentEventHandler.js
 
 node cqrs/4-OrderPaymentEventHandler.js
 
+# Diagram
+
+![alt text](images/diagram.png)
+
+
 # access the UI
 http://localhost:3000/
 
