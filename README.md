@@ -1,4 +1,3 @@
-# install redis
 
 # cqrs
 
@@ -6,6 +5,7 @@ docker run -d -p 6378:6379 --name redismod redislabs/redismod
 
 npm -y install 
 
+#####  install redis
 # load the database with product info
 node seed/product.js 
 
