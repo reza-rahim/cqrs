@@ -1,6 +1,6 @@
 var redis = require('redis');
 var redisHost = process.env.redisHost || 'localhost';
-var redisPort = parseInt(process.env.redisPort) || 6379;
+var redisPort = parseInt(process.env.redisPort) || 6378;
 
 console.log("conneting to " + redisHost + ":" + redisPort )
 

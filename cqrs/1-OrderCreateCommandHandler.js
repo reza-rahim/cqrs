@@ -111,7 +111,7 @@ async function add_to_event_store (redisClient, key, streamPayload ) {
 
 async function main(){
   var redisHost = process.env.redisHost || '127.0.0.1';
-  var redisPort = parseInt(process.env.redisPort) || 6379;
+  var redisPort = parseInt(process.env.redisPort) || 6378;
 
   console.log("conneting to " + redisHost + ":" + redisPort )
 

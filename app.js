@@ -33,7 +33,7 @@ app.use(cookieParser());
 
 //added 2
 var redisHost = process.env.redisHost || 'localhost';
-var redisPort = parseInt(process.env.redisPort) || 6379;
+var redisPort = parseInt(process.env.redisPort) || 6378;
 var sessionTimeout = parseInt(process.env.sessionTimeout) || 260;
 var redisClient = Redis.redisClient
 
