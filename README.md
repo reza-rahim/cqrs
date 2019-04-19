@@ -5,7 +5,7 @@ docker run -d -p 6378:6379 --name redismod redislabs/redismod
 
 npm -y install 
 
-##### if you are in mac
+### if you are in mac
 brew install redis
 
 # load the database with product info
