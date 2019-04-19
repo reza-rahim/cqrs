@@ -1,3 +1,5 @@
+# install redis
+
 # cqrs
 
 docker run -d -p 6378:6379 --name redismod redislabs/redismod
