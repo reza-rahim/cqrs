@@ -32,6 +32,17 @@ node cqrs/4-OrderPaymentEventHandler.js
 
 ![alt text](images/diagram.png)
 
+# redis command
+```bash
+FT.SEARCH event_store *
+FT.SEARCH order_view *
+
+
+XRANGE StreamCreateOrder - +
+XRANGE StreamOrderAggregate - +
+XRANGE StreamOrderPayment - +
+XRANGE StreamCreatePayment - +
+```
 
 # access the UI
 http://localhost:3000/
